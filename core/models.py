@@ -8,7 +8,7 @@ class Application(models.Model):
     """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=120)
-    host = models.URLField()
+    host = models.URLField(unique=True)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True, editable=False)
 
@@ -19,7 +19,7 @@ class Session(models.Model):
     """
         Session model provides a unique identifier for each event session.
     """
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.CharField(primary_key=True, max_length=36, default=uuid.uuid4, editable=False)
     application = models.ForeignKey(Application, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
 
