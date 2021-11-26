@@ -3,7 +3,11 @@ django<3.3
 # API
 djangorestframework==3.12.4
 markdown==3.3.6
-drf-yasg==1.20.1
+drf-yasg==1.20.0
+
+# Celery
+celery==5.2.1
+celery[redis]==5.2.1
 
 # dev
 django_debug_toolbar==3.2.2

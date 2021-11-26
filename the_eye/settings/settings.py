@@ -126,3 +126,19 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Celery
+BROKER_URL = 'redis://localhost:6379/0'
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_TASK_IGNORE_RESULT = True
+CELERY_RESULT_PERSISTENT = False # Not persist
+CELERY_ENABLE_UTC = True
+CELERY_TRACK_STARTED = True # Alert when start, avoid repetition
+CELERY_TASK_RESULT_EXPIRES = 0 # Not persist
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERYD_PREFETCH_MULTIPLIER = 1
+CELERYD_SEND_EVENTS = True
+CELERYD_TASK_TIME_LIMIT = 30

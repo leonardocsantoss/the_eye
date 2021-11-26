@@ -37,3 +37,13 @@ Consumer Affairs Practical Test: https://gist.github.com/wsantos/fdc18cec2329777
 ```shell
     python manage.py runserver
 ```
+
+8. Install Redis using Docker
+```shell
+    docker run --name my-redis -p 6379:6379 -d redis
+```
+
+9. Run the Celery in another shell
+```shell
+    celery --app=the_eye worker
+```
