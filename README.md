@@ -59,9 +59,7 @@ I'm using a class cache on EventView to avoid making many requests to verify if 
 ```shell
     python manage.py runserver
 ```
-See the documentation on http://localhost:8000/docs/
-And the admin on http://localhost:8000/admin/
-
+- See the documentation on http://localhost:8000/docs/ and the admin on http://localhost:8000/admin/
 - You need to create an Application using the admin to allow the Host to send data.
 
 
