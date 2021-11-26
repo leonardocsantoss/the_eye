@@ -33,7 +33,6 @@ class EventView(generics.CreateAPIView):
         # Verify if the host is valid using a class cache
         application = self.get_application(request.headers['Origin'])
         if not application:
-            print(application)
             return Response({"status": False}, status=status.HTTP_401_UNAUTHORIZED)
         
         serializer = self.get_serializer(data=request.data)
