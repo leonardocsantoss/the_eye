@@ -1,5 +1,5 @@
 # The Eye
-https://gist.github.com/wsantos/fdc18cec2329777f74f1ba00098c9d0b
+Consumer Affairs Practical Test: https://gist.github.com/wsantos/fdc18cec2329777f74f1ba00098c9d0b
 
 ## Start the project
 
