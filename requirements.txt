@@ -1,0 +1,2 @@
+django<3.3
+django_debug_toolbar==3.2.2
